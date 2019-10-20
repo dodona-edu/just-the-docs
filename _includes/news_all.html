@@ -1,0 +1,15 @@
+<ul class='news-overview'>
+  {% assign all_news = site.news | where: "lang", page.lang %}
+  {% for news in all_news %}
+  <li>
+    <article>
+      <a href="{{ news.url }}">{{ news.title }}</a>
+      {% if page.lang == "nl" %}
+        <time class='news-date'>{{ news.date | date: "%d/%m/%Y"}}</time>
+      {% else %}
+        <time class='news-date'>{{ news.date | date: "%B %d, %Y" }}</time>
+      {% endif %}
+    </article>
+  </li>
+  {% endfor %}
+</ul>

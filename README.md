@@ -4,6 +4,7 @@
 - Add some css utilities
 - Add the news layout
 - Add news to the navigation
+- Add all/recent news widgets
 
 ---
 
