@@ -1,6 +1,7 @@
 # Modifications of this fork
 
 - Don't display redirect links in the navigation
+- Add some css utilities
 - Add the news layout
 
 ---
