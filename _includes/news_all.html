@@ -1,5 +1,5 @@
 <ul class='news-overview'>
-  {% assign all_news = site.news | where: "lang", page.lang %}
+  {% assign all_news = site.news | where: "lang", page.lang | reverse %}
   {% for news in all_news %}
   <li>
     <article>
