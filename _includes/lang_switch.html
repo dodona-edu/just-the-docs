@@ -1,0 +1,10 @@
+{%- assign alt_pages = site.html_pages | concat: site.news | where: "slug", page.slug -%}
+{%- if alt_pages.size == 2 -%}
+  {%- if page.lang == "en" -%}
+    {%- assign alt_page=alt_pages | where: "lang", "nl" | first -%}
+    <p class="switch-language"><a href="{{ alt_page.url }}">Lees in het Nederlands</a></p>
+  {%- else -%}
+    {%- assign alt_page=alt_pages | where: "lang", "en" | first -%}
+    <p class="switch-language"><a href="{{ alt_page.url }}">Read in English</a></p>
+  {%- endif -%}
+{%- endif -%}
